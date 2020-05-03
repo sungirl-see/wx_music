@@ -1,0 +1,41 @@
+<!-- tab题目 -->
+<view class="tab">
+  <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">音乐推荐</view>
+  <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">播放器</view>
+  <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem" data-item="2">播放列表</view>
+</view>
+
+<!-- 中间内容区 -->
+<view class="content">
+<swiper circular="true" current="{{item}}" bindchange="changeTab">
+  <swiper-item>
+    <include src="info.wxml"/>
+  </swiper-item>
+  <swiper-item>
+    <include src="player.wxml"/>
+  </swiper-item>
+  <swiper-item>
+    <include src="playerList.wxml"/>
+  </swiper-item>
+</swiper>
+</view>
+
+
+<!-- 底部播放器 -->
+<view class="player">
+  <image class="player-cover" src="{{play.coverImgUrl}}" mode="aspectFill"></image>
+  <view class="player-info">
+    <view class="player-info-title">{{play.title}}</view>
+    <view class="player-info-singer">{{play.singer}}</view>
+  </view>
+  <view class="player-controls">
+  <!-- 切换到播放列表 -->
+  <!-- <image src="/image/list.png" bindtap="" data-page="2"></image> -->
+  <!-- 暂停播放 -->
+  <image wx:if="{{state=='paused'}}" src="/image/start.png" bindtap="play"></image>
+  <image wx:else src="/image/stop.png" bindtap="pause"></image>
+  <!-- 下一曲 -->
+  <image src="/image/next.png" bindtap="next"></image>
+  </view>
+  
+</view>

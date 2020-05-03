@@ -1,0 +1,202 @@
+page{
+  display: flex;
+  flex-direction: column;
+  background-color:#fff;
+  height: 100%;
+}
+.tab{
+  border-top:2rpx solid #ccc;
+  display: flex;
+}
+.tab-item{
+  flex: 1;
+  font-size: 10pt;
+  line-height: 72rpx;
+  border-bottom: 6rpx solid #ccc;
+  text-align: center;
+  color: #CC0000;
+}
+.tab-item.active{
+  border-bottom-color: #CC0000;
+}
+.content{
+  flex: 1;
+}
+.content>swiper{
+  height: 100%;
+}
+.content-info{
+  height:100%
+}
+.player{
+  background-color:#ccc;
+  border-top: 2rpx solid #999999;
+  height: 112rpx;
+}
+/* 去除滚动条 */
+/* ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+} */
+/* 轮播图样式 */
+.content-info-slide{
+  height: 302rpx;
+  margin-bottom: 20px;
+}
+.content-info-slide image{
+  width: 100%;
+  height: 100%;
+}
+/* 功能按钮 */
+.content-info-portal{
+  display: flex;
+  margin-bottom: 15px;
+}
+.content-info-portal>view{
+  flex: 1;
+  height: 110rpx;
+  margin: auto 70rpx;
+  font-size: 8pt;
+  text-align: center;
+  background-color: #d81e06;
+  border-radius: 50%;
+}
+.content-info-portal text{
+  color: #fff;
+}
+.content-info-portal image{
+  display: block;
+  margin: 10rpx auto;
+  width: 45rpx;
+  height: 45rpx;
+}
+/* 热门推荐 */
+.content-info-list{
+  font-size: 11pt;
+  margin-bottom: 20rpx;
+}
+.content-info-list>.list-title{
+  margin: 20rpx 35rpx;
+}
+.content-info-list>.list-inner{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+.content-info-list>.list-inner>.list-item{
+  flex: 1;
+}
+.content-info-list>.list-inner>.list-item>image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #ccc;
+}
+.content-info-list>.list-inner>.list-item>view{
+  width: 200rpx;
+  margin: 10rpx auto;
+  font-size: 10pt;
+}
+/* 播放器 */
+.content-play{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.content-play-info>view{
+  color: #888;
+  font-size: 11pt;
+}
+.content-play-cover image{
+animation: rotateImage 10s linear infinite;
+width: 400rpx;
+height: 400rpx;
+border-radius: 50%;
+border: 1px solid #333;
+}
+@keyframes rotateImage{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* 播放进度和时间 */
+.content-play-progress{
+  display: flex;
+  align-items: center;
+  margin: 0 35rpx;
+  font-size: 9pt;
+  text-align: center;
+}
+.content-play-progress>view{
+  flex: 1;
+}
+/* 底部播放器 */
+.player{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px  solid #ccc;
+  height: 112rpx;
+}
+.player-cover{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+  border: 1px solid #333;
+}
+.player-info{
+  flex: 1;
+  font-size: 10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+.player-info-singer{
+  color: #888;
+}
+.player-controls image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 15rpx;
+}
+/* 播放列表 */
+.content-playlist{
+  height: 100%;
+  /* background-color: antiquewhite; */
+}
+.playlist-item{
+  display: flex;
+  /* background-color: aqua; */
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+  height: 112rpx;
+}
+.playlist-cover{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+  border: 1px solid #333;
+}
+.playlist-info{
+  flex: 1;
+  font-size: 10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+.playlist-info-singer{
+  color: #bbb;
+}
+.playlist-controls{
+font-size: 10pt;
+margin-right: 20rpx;
+color: #d81e06;
+}

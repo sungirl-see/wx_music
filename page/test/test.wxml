@@ -1,0 +1,3 @@
+<view>
+  <button bindtap="onReady">按钮</button>
+</view>
